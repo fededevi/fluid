@@ -12,8 +12,7 @@ SOURCES += \
     $$PWD/iconsimageprovider.cpp \
     $$PWD/qmldateutils.cpp \
     $$PWD/qqmlsortfilterproxymodel.cpp \
-    $$PWD/standardpaths.cpp \
-    $$PWD/coreplugin.cpp
+    $$PWD/standardpaths.cpp
 
 RESOURCES += \
     $$PWD/core.qrc

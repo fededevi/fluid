@@ -1,0 +1,2 @@
+SOURCES += \
+    $$PWD/localplugin.cpp

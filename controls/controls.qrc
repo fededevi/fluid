@@ -48,6 +48,6 @@
         <file>+material/SubheadingLabel.qml</file>
         <file>+material/ThinDivider.qml</file>
         <file>+material/TitleLabel.qml</file>
-        <file alias="qmldir">qmldir_noplugin</file>
+        <file>plugins.qmltypes</file>
     </qresource>
 </RCC>

@@ -78,13 +78,4 @@ void FluidCorePlugin::registerTypes(const char *uri)
     qmlRegisterSingletonType<StandardPaths>(uri, 1, 0, "StandardPaths", standardPathsProvider);
 }
 
-#ifdef FLUID_LOCAL
-static void registerFluidCoreTypes() {
-    FluidCorePlugin fluidCore;
-    fluidCore.registerTypes("Fluid.Core");
-}
-
-Q_COREAPP_STARTUP_FUNCTION(registerFluidCoreTypes)
-#endif
-
 #include "coreplugin.moc"
