@@ -16,6 +16,7 @@ set(QML_FILES
     CaptionLabel.qml
     Card.qml
     CircleImage.qml
+    DatePicker.qml
     DialogLabel.qml
     DisplayLabel.qml
     FluidStyle.qml
