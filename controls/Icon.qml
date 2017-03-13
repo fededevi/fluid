@@ -81,7 +81,7 @@ Item {
     /*!
        The size of the icon. Defaults to 24px.
      */
-    property real size: 24
+    property real size: Config.iconSize
 
     /*!
        The name of the icon to display.

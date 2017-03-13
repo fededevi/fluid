@@ -31,6 +31,9 @@ ToolButton {
     property alias iconSize: icon.size
     property alias iconColor: icon.color
 
+    height: icon.size * 3
+    width: icon.width * 3
+
     indicator: Icon {
         id: icon
 

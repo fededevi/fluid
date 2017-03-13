@@ -14,6 +14,7 @@
 
 import QtQuick 2.0
 import QtQuick.Templates 2.0 as T
+import Fluid.Controls 1.0 as FluidControls
 
 /*!
     \qmltype SubheadingLabel
@@ -41,7 +42,7 @@ T.Label {
     */
     property int level: 1
 
-    font.pixelSize: 14
+    font.pixelSize: FluidControls.Config.fontSubHeading
     color: "#26282a"
     linkColor: "#45a7d7"
     onLevelChanged: {

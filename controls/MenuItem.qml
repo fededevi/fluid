@@ -12,9 +12,9 @@
  * $END_LICENSE$
  */
 
-import QtQuick 2.8
-import QtQuick.Controls 2.1
-import QtQuick.Controls.Material 2.1
+import QtQuick 2.7
+import QtQuick.Controls 2.0
+import QtQuick.Controls.Material 2.0
 import Fluid.Controls 1.0 as FluidControls
 
 /*!
@@ -32,6 +32,8 @@ MenuItem {
     property alias iconSize: icon.size
     property alias iconColor: icon.color
 
+    property alias textColor: menuText.color
+
     contentItem: Item {
         FluidControls.Icon {
             id: icon
@@ -40,10 +42,11 @@ MenuItem {
         }
 
         Text {
+            id: menuText
             anchors {
                 left: icon.right
                 verticalCenter: parent.verticalCenter
-                leftMargin: 16
+                leftMargin: FluidControls.Config.marginRow
             }
 
             leftPadding: control.checkable && !control.mirrored ? control.indicator.width + control.spacing : 0
