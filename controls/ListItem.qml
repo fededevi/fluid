@@ -71,7 +71,7 @@ BaseListItem {
                 }
 
                 visible: icon.valid
-                color: listItem.highlighted ? Material.primaryColor : enabled ? Material.iconColor : Material.iconDisabledColor
+                color: listItem.highlighted ? Config.material.accent : enabled ? Config.material.foreground : Config.material.iconDisabledColor
             }
         }
 

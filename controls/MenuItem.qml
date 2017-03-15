@@ -35,13 +35,14 @@ MenuItem {
     property alias textColor: menuText.color
 
     contentItem: Item {
+        anchors.verticalCenter: parent.verticalCenter
+
         FluidControls.Icon {
             id: icon
-
             anchors.verticalCenter: parent.verticalCenter
         }
 
-        Text {
+        Text {            
             id: menuText
             anchors {
                 left: icon.right

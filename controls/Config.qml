@@ -18,10 +18,10 @@ Item {
 
     property var material: Material
 
-    Material.primary: Material.Blue
+    Material.primary: "#A12200" //Material.Red//Material.Blue
     Material.foreground: "white"
     Material.background: "#EEEEEE" //Material.Grey
-    Material.accent: Material.Red
+    Material.accent: Material.Blue
     Material.theme: Material.Dark
     Material.elevation: 2
 

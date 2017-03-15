@@ -76,7 +76,7 @@ Item {
     /*!
        The color of the icon. Defaults to \c Material.iconColor.
      */
-    property color color: Material.iconColor
+    property color color: Config.material.foreground
 
     /*!
        The size of the icon. Defaults to 24px.
