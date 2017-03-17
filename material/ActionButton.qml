@@ -50,8 +50,8 @@ Button {
 
     padding: 0
 
-    width: 76
-    height: 76
+    width: isMiniSize ? 60 : 76
+    height: isMiniSize ? 60 : 76
 
     contentItem: Item {
         implicitHeight: isMiniSize ? 40 : 56
@@ -67,8 +67,8 @@ Button {
     }
 
     background: Rectangle {
-        implicitWidth: 64
-        implicitHeight: 64
+        implicitWidth: isMiniSize ? 48 : 64
+        implicitHeight: isMiniSize ? 48 : 64
 
         x: 6
         y: 6
