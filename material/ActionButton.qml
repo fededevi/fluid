@@ -38,6 +38,10 @@ Button {
      */
     property alias iconName: icon.name
 
+    property alias iconColor: icon.color
+
+    property alias buttonColor: btnRect.color
+
     /*!
        Floating action buttons come in two sizes:
 
@@ -50,11 +54,11 @@ Button {
 
     padding: 0
 
-    width: isMiniSize ? 60 : 76
-    height: isMiniSize ? 60 : 76
+    width: isMiniSize ? 50 : 60
+    height: isMiniSize ? 50 : 60
 
     contentItem: Item {
-        implicitHeight: isMiniSize ? 40 : 56
+        implicitHeight: isMiniSize ? 30 : 40
         implicitWidth: implicitHeight
 
         Icon {
@@ -67,8 +71,9 @@ Button {
     }
 
     background: Rectangle {
-        implicitWidth: isMiniSize ? 48 : 64
-        implicitHeight: isMiniSize ? 48 : 64
+        id: btnRect
+        implicitWidth: isMiniSize ? 38 : 48
+        implicitHeight: isMiniSize ? 38 : 48
 
         x: 6
         y: 6
