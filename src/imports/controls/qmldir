@@ -39,3 +39,4 @@ TabbedPage 1.0 TabbedPage.qml
 ThinDivider 1.0 ThinDivider.qml
 TitleLabel 1.0 TitleLabel.qml
 singleton Units 1.0 Units.qml
+singleton Config 1.0 Config.qml

@@ -37,5 +37,6 @@
         <file>TitleLabel.qml</file>
         <file>Units.qml</file>
         <file alias="qmldir">qmldir_noplugin</file>
+        <file>Config.qml</file>
     </qresource>
 </RCC>
