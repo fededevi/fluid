@@ -14,12 +14,22 @@
 
 #include "device.h"
 
+#ifdef QT_DEBUG
+#include <QWindow>
+#endif
+
 Device::Device(QObject *parent)
     : QObject(parent)
 {
     m_screen = qGuiApp->primaryScreen();
 
     connect(qGuiApp, &QGuiApplication::primaryScreenChanged, this, &Device::screenChanged);
+
+#ifdef QT_DEBUG
+    QWindow * win = qGuiApp->allWindows().at(0);
+    connect(win, &QWindow::widthChanged, [=]() { emit geometryChanged(); });
+    connect(win, &QWindow::heightChanged, [=]() { emit geometryChanged(); });
+#endif
 }
 
 Device::FormFactor Device::formFactor() const
@@ -83,7 +93,12 @@ QString Device::iconName() const
 
 bool Device::isPortrait() const
 {
+#ifdef QT_DEBUG
+    QWindow * win = qGuiApp->allWindows().at(0);
+    return win->size().height() > win->size().width();
+#else
     return m_screen->physicalSize().height() > m_screen->physicalSize().width();
+#endif
 }
 
 bool Device::hasTouchScreen() const
@@ -146,7 +161,13 @@ void Device::screenChanged()
 
 float Device::calculateDiagonal() const
 {
+#ifdef QT_DEBUG
+    QWindow * win = qGuiApp->allWindows().at(0);
+    return sqrt(pow((win->size().width() / m_screen->logicalDotsPerInch()), 2)
+                + pow((win->size().height() / m_screen->logicalDotsPerInch()), 2));
+#else
     return sqrt(pow((m_screen->physicalSize().width()), 2)
                 + pow((m_screen->physicalSize().height()), 2))
         * 0.039370;
+#endif
 }
