@@ -38,6 +38,10 @@ Button {
        Design icon collection by Google.
      */
     property alias iconName: icon.name
+    property alias iconSource: icon.source
+    property alias iconColor: icon.color
+    property alias iconSize: icon.size
+    property alias buttonColor: btnRect.color
 
     /*!
        Floating action buttons come in two sizes:
@@ -51,11 +55,11 @@ Button {
 
     padding: 0
 
-    width: 76
-    height: 76
+    width: isMiniSize ? 50 : 60
+    height: isMiniSize ? 50 : 60
 
     contentItem: Item {
-        implicitHeight: isMiniSize ? 40 : 56
+        implicitHeight: isMiniSize ? 30 : 40
         implicitWidth: implicitHeight
 
         Icon {
@@ -68,8 +72,9 @@ Button {
     }
 
     background: Rectangle {
-        implicitWidth: 64
-        implicitHeight: 64
+        id: btnRect
+        implicitWidth: isMiniSize ? 38 : 48
+        implicitHeight: isMiniSize ? 38 : 48
 
         x: 6
         y: 6
