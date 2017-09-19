@@ -14,6 +14,7 @@
 
 import QtQuick 2.0
 import QtQuick.Controls 2.0
+import Fluid.Controls 1.0 as FluidControls
 
 /*!
     \qmltype TitleLabel
@@ -34,6 +35,7 @@ import QtQuick.Controls 2.0
     \endcode
 */
 Label {
-    font.pixelSize: 20
+    font.pixelSize: FluidControls.Config.fontHeading
+    color: FluidControls.Config.material.foreground
     font.weight: Font.Medium
 }

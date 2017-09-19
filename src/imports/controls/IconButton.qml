@@ -16,6 +16,8 @@ import QtQuick 2.0
 import QtQuick.Controls 2.0
 import QtQuick.Controls.Material 2.0
 
+import Fluid.Core 1.0
+
 /*!
     \qmltype IconButton
     \inqmlmodule Fluid.Controls
@@ -67,6 +69,14 @@ ToolButton {
         Default is \c false.
     */
     property bool hoverAnimation: false
+
+    property string tooltip
+    ToolTip.visible: ToolTip.text != "" && (Device.isMobile ? pressed : hovered)
+    ToolTip.delay: Qt.styleHints.mousePressAndHoldInterval
+    ToolTip.text: tooltip
+
+    height: icon.size * 3
+    width: icon.width * 3
 
     indicator: Icon {
         id: icon

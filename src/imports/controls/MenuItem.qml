@@ -32,7 +32,11 @@ MenuItem {
     property alias iconSize: icon.size
     property alias iconColor: icon.color
 
+    property alias textColor: menuText.color
+
     contentItem: Item {
+        anchors.verticalCenter: parent.verticalCenter
+
         FluidControls.Icon {
             id: icon
 
@@ -40,10 +44,11 @@ MenuItem {
         }
 
         Text {
+            id: menuText
             anchors {
-                left: icon.right
+                left: icon.status !== Image.Null ? icon.right : undefined
                 verticalCenter: parent.verticalCenter
-                leftMargin: 16
+                leftMargin: FluidControls.Config.marginRow
             }
 
             leftPadding: control.checkable && !control.mirrored ? control.indicator.width + control.spacing : 0

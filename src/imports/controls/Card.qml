@@ -15,6 +15,8 @@
 import QtQuick.Controls 2.0 as C
 import QtQuick.Controls.Material 2.0
 
+import Fluid.Controls 1.0 as FluidControls
+
 /*!
     \qmltype Card
     \inqmlmodule Fluid.Controls
@@ -86,6 +88,6 @@ import QtQuick.Controls.Material 2.0
 C.Pane {
     padding: 0
 
-    Material.background: "white"
+    Material.background: FluidControls.Config.cardBackground
     Material.elevation: 1
 }

@@ -15,6 +15,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0
 import Fluid.Core 1.0 as FluidCore
+import Fluid.Controls 1.0 as FluidControls
 
 /*!
     \qmltype BodyLabel
@@ -47,11 +48,9 @@ Label {
     */
     property int level: 1
 
-    font.pixelSize: FluidCore.Device.isMobile ? 14 : 13
+    font.pixelSize: FluidControls.Config.fontBody
     font.weight: level == 1 ? Font.Normal : Font.Medium
-    lineHeight: level <= 1 ? 20.0 : 24.0
-    lineHeightMode: Text.FixedHeight
-
+    color: FluidControls.Config.material.foreground
     onLevelChanged: {
         if (level < 1 || level > 2)
             console.error("BodyLabel level must be either 1 or 2");

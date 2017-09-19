@@ -114,7 +114,7 @@ ItemDelegate {
                 }
 
                 visible: icon.valid
-                color: listItem.highlighted ? Material.primaryColor : enabled ? Material.iconColor : Material.iconDisabledColor
+                color: listItem.highlighted ? FluidControls.Config.secondaryForeground : enabled ? FluidControls.Config.material.foreground : FluidControls.Config.material.iconDisabledColor
             }
         }
 
@@ -143,8 +143,8 @@ ItemDelegate {
 
                     text: listItem.text
                     elide: Text.ElideRight
-                    color: listItem.highlighted ? Material.primaryColor
-                                                : Material.primaryTextColor
+                    color: listItem.highlighted ? FluidControls.Config.secondaryForeground
+                                                : FluidControls.Config.material.foreground
                     visible: text != ""
                 }
 
@@ -156,7 +156,8 @@ ItemDelegate {
                     Layout.preferredWidth: visible ? implicitWidth : 0
                     Layout.preferredHeight: visible ? implicitHeight : 0
 
-                    color: Material.secondaryTextColor
+                    color: listItem.highlighted ? FluidControls.Config.secondaryForeground
+                                                : FluidControls.Config.material.foreground
                     elide: Text.ElideRight
 
                     visible: text != ""
@@ -170,7 +171,8 @@ ItemDelegate {
                 Layout.fillWidth: true
                 Layout.preferredHeight: visible ? implicitHeight * maximumLineCount/lineCount : 0
 
-                color: Material.secondaryTextColor
+                color: listItem.highlighted ? FluidControls.Config.secondaryForeground
+                                            : FluidControls.Config.material.foreground
                 elide: Text.ElideRight
                 wrapMode: Text.WordWrap
 

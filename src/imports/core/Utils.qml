@@ -43,9 +43,13 @@ QtObject {
         modify the original color at all.
     */
     function alpha(color, alpha) {
-        color = asColor(color);
-        color.a = alpha;
-        return color;
+        var newColor = asColor(color)
+        if(newColor) {
+            return newColor
+            newColor.a = alpha
+        } else {
+            return color
+        }
     }
 
     /*!
