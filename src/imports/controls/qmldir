@@ -12,6 +12,8 @@ BodyLabel 1.0 BodyLabel.qml
 CaptionLabel 1.0 CaptionLabel.qml
 Card 1.0 Card.qml
 CircleImage 1.0 CircleImage.qml
+DatePicker 1.0 DatePicker.qml
+DateSelector 1.0 DateSelector.qml
 DialogLabel 1.0 DialogLabel.qml
 DisplayLabel 1.0 DisplayLabel.qml
 HeadlineLabel 1.0 HeadlineLabel.qml
@@ -27,6 +29,7 @@ NoiseBackground 1.0 NoiseBackground.qml
 OverlayView 1.0 OverlayView.qml
 Page 1.0 Page.qml
 PageStack 1.0 PageStack.qml
+Picker 1.0 Picker.qml
 Placeholder 1.0 Placeholder.qml
 Showable 1.0 Showable.qml
 Sidebar 1.0 Sidebar.qml
@@ -39,4 +42,5 @@ TabbedPage 1.0 TabbedPage.qml
 ThinDivider 1.0 ThinDivider.qml
 TitleLabel 1.0 TitleLabel.qml
 singleton Units 1.0 Units.qml
+YearSelector 1.0 YearSelector.qml
 singleton Config 1.0 Config.qml
