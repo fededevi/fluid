@@ -38,5 +38,10 @@
         <file>Units.qml</file>
         <file alias="qmldir">qmldir_noplugin</file>
         <file>Config.qml</file>
+        <file>TimePicker.qml</file>
+        <file>TimeSelector.qml</file>
+        <file>Picker.qml</file>
+        <file>DatePicker.qml</file>
+        <file>YearSelector.qml</file>
     </qresource>
 </RCC>
