@@ -53,6 +53,11 @@ Button {
      */
     property bool isMiniSize: false
 
+    /*!
+        Specify whether the icon should be rotated 90 degrees when the mouse hovers.
+        Default is \c false.
+    */
+    property bool hoverAnimation: false
     padding: 0
 
     width: isMiniSize ? 50 : 60
@@ -68,6 +73,11 @@ Button {
             anchors.centerIn: parent
             color: Utils.lightDark(button.Material.background, "black", "white")
             size: 24
+
+            rotation: button.hoverAnimation && button.hovered ? 90 : 0
+            Behavior on rotation {
+                NumberAnimation { duration: 200 }
+            }
         }
     }
 
