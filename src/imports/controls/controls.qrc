@@ -43,5 +43,6 @@
         <file>Picker.qml</file>
         <file>DatePicker.qml</file>
         <file>YearSelector.qml</file>
+        <file>DateTimePicker.qml</file>
     </qresource>
 </RCC>
